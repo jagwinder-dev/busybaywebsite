@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BusyBay — Online Booking for Australian Automotive Workshops</title>
-  <meta name="description" content="BusyBay gives Australian automotive workshops a simple, branded online booking system. Accept bookings 24/7, manage your schedule, and keep customers coming back." />
+  <title>BusyBay — Your Workshop Online. Bookings Managed.</title>
+  <meta name="description" content="BusyBay gives Australian automotive workshops a branded public page where customers can find your services and book online — and a simple dashboard to manage every job. Free to get started." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>
@@ -88,7 +88,7 @@
     .nav-logo-icon svg { width: 20px; height: 20px; fill: #fff; }
     .nav-logo-text { font-size: 1.25rem; font-weight: 800; color: var(--primary); }
     .nav-logo-text span { color: var(--accent); }
-    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
     .nav-links a { text-decoration: none; color: var(--gray-600); font-size: 0.92rem; font-weight: 500; transition: color .2s; }
     .nav-links a:hover { color: var(--primary); }
     .nav-actions { display: flex; align-items: center; gap: 12px; }
@@ -153,13 +153,13 @@
       50% { opacity: .6; transform: scale(1.4); }
     }
     .hero-copy h1 {
-      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
       font-weight: 900; color: #fff; line-height: 1.1;
       margin-bottom: 24px; letter-spacing: -.02em;
     }
     .hero-copy h1 span { color: var(--accent); }
     .hero-copy p {
-      font-size: 1.15rem; color: rgba(255,255,255,.8);
+      font-size: 1.1rem; color: rgba(255,255,255,.8);
       max-width: 480px; margin-bottom: 40px; line-height: 1.7;
     }
     .hero-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
@@ -173,39 +173,55 @@
       display: flex; gap: 32px; margin-top: 52px; padding-top: 32px;
       border-top: 1px solid rgba(255,255,255,.15);
     }
-    .hero-stat-num { font-size: 1.7rem; font-weight: 800; color: #fff; }
-    .hero-stat-label { font-size: 0.82rem; color: rgba(255,255,255,.6); margin-top: 2px; }
+    .hero-stat-num { font-size: 1.5rem; font-weight: 800; color: #fff; }
+    .hero-stat-label { font-size: 0.8rem; color: rgba(255,255,255,.6); margin-top: 2px; }
 
-    /* Hero Booking Card */
+    /* ── Hero Two-Panel Card ─────────────────────────────── */
     .hero-visual { position: relative; z-index: 1; }
     .booking-card {
       background: rgba(255,255,255,.1);
       backdrop-filter: blur(20px);
       border: 1px solid rgba(255,255,255,.18);
-      border-radius: 20px; padding: 28px;
+      border-radius: 20px;
       box-shadow: 0 24px 60px rgba(0,0,0,.25);
+      overflow: hidden;
     }
-    .booking-card-header {
-      display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px;
+    .two-panel { display: grid; grid-template-columns: 1fr 1px 1fr; }
+    .hero-panel { padding: 22px 20px; }
+    .hero-panel-divider { background: rgba(255,255,255,.15); }
+    .panel-label {
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .1em; color: rgba(255,255,255,.45); margin-bottom: 14px;
     }
-    .booking-card-title { font-size: 0.9rem; font-weight: 600; color: rgba(255,255,255,.9); }
-    .booking-card-badge { font-size: 0.72rem; font-weight: 700; padding: 4px 10px; background: #4ade80; color: #064e3b; border-radius: 100px; }
-    .booking-field { margin-bottom: 14px; }
-    .booking-field-label { font-size: 0.72rem; color: rgba(255,255,255,.5); margin-bottom: 5px; text-transform: uppercase; letter-spacing: .06em; }
+    .mock-ws-title { font-size: 0.95rem; font-weight: 800; color: #fff; margin-bottom: 3px; }
+    .mock-ws-sub { font-size: 0.7rem; color: rgba(255,255,255,.55); margin-bottom: 12px; line-height: 1.4; }
+    .hero-pill {
+      display: inline-block;
+      background: rgba(0,180,216,.25); color: rgba(255,255,255,.9);
+      font-size: 0.65rem; font-weight: 600; padding: 3px 8px;
+      border-radius: 100px; margin: 2px;
+    }
+    .hero-pills { margin-bottom: 14px; }
+    .mock-book-btn {
+      display: block; width: 100%; background: var(--accent); color: #fff;
+      text-align: center; padding: 9px 6px; border-radius: 7px;
+      font-size: 0.78rem; font-weight: 700; border: none; cursor: default;
+      margin-top: 10px;
+    }
+    .booking-field { margin-bottom: 10px; }
+    .booking-field-label { font-size: 0.65rem; color: rgba(255,255,255,.45); margin-bottom: 4px; text-transform: uppercase; letter-spacing: .06em; }
     .booking-field-value {
-      background: rgba(255,255,255,.08); border-radius: 9px;
-      padding: 12px 14px; color: #fff; font-size: 0.9rem; font-weight: 500;
-      display: flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.08); border-radius: 7px;
+      padding: 8px 10px; color: #fff; font-size: 0.78rem; font-weight: 500;
+      display: flex; align-items: center; gap: 6px;
     }
-    .booking-field-value .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
-    .booking-divider { height: 1px; background: rgba(255,255,255,.1); margin: 18px 0; }
+    .booking-field-value .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
     .booking-status {
-      display: flex; align-items: center; gap: 10px;
+      display: flex; align-items: center; gap: 8px;
       background: rgba(74,222,128,.12); border: 1px solid rgba(74,222,128,.25);
-      border-radius: 10px; padding: 12px 16px;
+      border-radius: 8px; padding: 9px 12px; margin-top: 10px;
     }
-    .booking-status-icon { font-size: 1rem; }
-    .booking-status-text { font-size: 0.85rem; font-weight: 600; color: #4ade80; }
+    .booking-status-text { font-size: 0.75rem; font-weight: 600; color: #4ade80; }
     .hero-notification {
       position: absolute; bottom: -20px; left: -28px;
       background: #fff; border-radius: 14px; padding: 12px 18px;
@@ -229,8 +245,64 @@
     .feature-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; color: var(--primary); }
     .feature-card p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.65; }
 
+    /* ── Two Sides ──────────────────────────────────────── */
+    #two-sides { padding: 100px 0; background: var(--off-white); }
+    .two-sides-intro { text-align: center; margin-bottom: 52px; }
+    .two-sides-intro .section-sub { margin: 0 auto; }
+    .two-sides-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+    }
+    .side-header { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
+    .side-chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--accent-light); color: var(--accent-dark);
+      font-size: 0.78rem; font-weight: 700; padding: 5px 14px;
+      border-radius: 100px;
+    }
+    .side-card {
+      background: #fff; border: 1px solid var(--gray-200);
+      border-radius: var(--radius); padding: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    .mock-name { font-size: 1.05rem; font-weight: 800; color: var(--primary); margin-bottom: 3px; }
+    .mock-sub { font-size: 0.85rem; color: var(--gray-600); margin-bottom: 16px; }
+    .pill {
+      display: inline-block;
+      background: var(--accent-light); color: var(--accent-dark);
+      font-size: 0.78rem; font-weight: 600; padding: 4px 12px;
+      border-radius: 100px; margin: 3px;
+    }
+    .pills-row { margin-bottom: 4px; }
+    .side-divider { height: 1px; background: var(--gray-200); margin: 18px 0; }
+    .side-book-btn {
+      display: block; width: 100%; background: var(--accent); color: #fff;
+      text-align: center; padding: 13px; border-radius: 8px;
+      font-size: 0.92rem; font-weight: 700; border: none; cursor: default;
+    }
+    .side-note { font-size: 0.78rem; color: var(--gray-400); text-align: center; margin-top: 10px; }
+    .side-bullets { list-style: none; margin-top: 20px; display: flex; flex-direction: column; gap: 9px; }
+    .side-bullets li { font-size: 0.9rem; color: var(--gray-600); display: flex; align-items: flex-start; gap: 9px; }
+    .side-bullets li::before { content: '✓'; color: var(--accent); font-weight: 800; flex-shrink: 0; }
+    .dash-header-row { font-size: 0.82rem; font-weight: 700; color: var(--primary); margin-bottom: 14px; }
+    .booking-row {
+      display: flex; align-items: center; gap: 12px;
+      padding: 10px 0; border-bottom: 1px solid var(--gray-100);
+    }
+    .booking-row:last-of-type { border-bottom: none; }
+    .status-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+    .booking-row-info { flex: 1; }
+    .booking-row-service { font-size: 0.82rem; font-weight: 600; color: var(--gray-800); }
+    .booking-row-customer { font-size: 0.75rem; color: var(--gray-400); }
+    .booking-row-time { font-size: 0.78rem; color: var(--gray-400); white-space: nowrap; }
+    .alert-bar {
+      background: var(--accent-light); border-radius: 8px;
+      padding: 10px 14px; font-size: 0.82rem; font-weight: 600;
+      color: var(--accent-dark); display: flex; align-items: center; gap: 8px;
+      margin-top: 4px;
+    }
+
     /* ── How it works ───────────────────────────────────── */
-    #how-it-works { padding: 100px 0; background: var(--off-white); }
+    #how-it-works { padding: 100px 0; background: #fff; }
     .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 60px; position: relative; }
     .steps-grid::before {
       content: ''; position: absolute;
@@ -251,7 +323,7 @@
     .step p { font-size: 0.85rem; color: var(--gray-600); line-height: 1.6; }
 
     /* ── About ──────────────────────────────────────────── */
-    #about { padding: 100px 0; background: #fff; }
+    #about { padding: 100px 0; background: var(--off-white); }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     .about-visual { position: relative; }
     .about-img-card {
@@ -263,7 +335,7 @@
       background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.2);
       color: #fff; font-size: 0.78rem; font-weight: 600; padding: 6px 14px; border-radius: 100px;
     }
-    .about-quote { color: #fff; font-size: 1.1rem; font-weight: 500; line-height: 1.7; font-style: italic; }
+    .about-quote { color: #fff; font-size: 1.05rem; font-weight: 500; line-height: 1.75; font-style: italic; }
     .about-quote-author { color: rgba(255,255,255,.65); font-size: 0.85rem; margin-top: 10px; }
     .about-float-card {
       position: absolute; right: -30px; top: 50%; transform: translateY(-50%);
@@ -282,7 +354,7 @@
     .value-item {
       display: flex; align-items: flex-start; gap: 14px;
       padding: 18px; border-radius: var(--radius);
-      background: var(--off-white); border: 1px solid var(--gray-200); transition: border-color .2s;
+      background: #fff; border: 1px solid var(--gray-200); transition: border-color .2s;
     }
     .value-item:hover { border-color: var(--accent); }
     .value-item-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 1px; }
@@ -302,7 +374,7 @@
     }
     .cta-inner { position: relative; z-index: 1; }
     .cta-inner h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: #fff; margin-bottom: 18px; }
-    .cta-inner p { font-size: 1.1rem; color: rgba(255,255,255,.75); max-width: 480px; margin: 0 auto 40px; }
+    .cta-inner p { font-size: 1.1rem; color: rgba(255,255,255,.75); max-width: 520px; margin: 0 auto 40px; }
     .cta-actions { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
     .cta-actions .btn-white { background: #fff; color: var(--primary); font-size: 1rem; padding: 15px 34px; }
     .cta-actions .btn-white:hover { background: var(--off-white); transform: translateY(-1px); box-shadow: var(--shadow-md); }
@@ -348,6 +420,7 @@
       .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
       .steps-grid::before { display: none; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
+      .two-sides-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
       .hero-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -357,6 +430,7 @@
       .about-float-card { display: none; }
       .features-grid { grid-template-columns: 1fr; }
       .steps-grid { grid-template-columns: 1fr; }
+      .two-sides-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
       .coming-soon-inner { flex-direction: column; }
       .nav-links, .nav-actions { display: none; }
@@ -379,6 +453,7 @@
     </a>
     <ul class="nav-links">
       <li><a href="#features">Features</a></li>
+      <li><a href="#two-sides">Your Page</a></li>
       <li><a href="#how-it-works">How It Works</a></li>
       <li><a href="#about">About Us</a></li>
       <li><a href="#coming-soon">Early Access</a></li>
@@ -396,6 +471,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <ul>
     <li><a href="#features" onclick="closeMobile()">Features</a></li>
+    <li><a href="#two-sides" onclick="closeMobile()">Your Page</a></li>
     <li><a href="#how-it-works" onclick="closeMobile()">How It Works</a></li>
     <li><a href="#about" onclick="closeMobile()">About Us</a></li>
     <li><a href="#coming-soon" onclick="closeMobile()">Early Access</a></li>
@@ -415,55 +491,72 @@
           <span class="hero-badge-dot"></span>
           Now in development &mdash; join the waitlist
         </div>
-        <h1>Book smarter.<br><span>Work faster.</span><br>Grow your workshop.</h1>
-        <p>BusyBay gives your automotive workshop a simple, branded online booking system — so customers can book 24/7 while you stay in full control of every job.</p>
+        <h1>Your workshop,<br><span>online in minutes.</span><br>Bookings managed.</h1>
+        <p>BusyBay gives your automotive workshop a branded public page — so customers can find your services and book online 24/7. You get a dashboard to confirm every job and manage your customers. No website needed.</p>
         <div class="hero-actions">
           <a href="#coming-soon" class="btn btn-primary">Get Early Access &rarr;</a>
-          <a href="#about" class="btn btn-ghost">Learn More</a>
+          <a href="#two-sides" class="btn btn-ghost">See How It Works</a>
         </div>
         <div class="hero-stats">
           <div>
-            <div class="hero-stat-num">100%</div>
-            <div class="hero-stat-label">Australian Built</div>
+            <div class="hero-stat-num">Your Page</div>
+            <div class="hero-stat-label">Public workshop presence</div>
           </div>
           <div>
             <div class="hero-stat-num">24/7</div>
-            <div class="hero-stat-label">Online Bookings</div>
+            <div class="hero-stat-label">Online bookings</div>
           </div>
           <div>
             <div class="hero-stat-num">Free</div>
-            <div class="hero-stat-label">to Get Started</div>
+            <div class="hero-stat-label">To get started</div>
           </div>
         </div>
       </div>
+
       <div class="hero-visual">
-        <div class="booking-card">
-          <div class="booking-card-header">
-            <span class="booking-card-title">New Booking Request</span>
-            <span class="booking-card-badge">&#9679; Incoming</span>
+        <div class="booking-card two-panel">
+          <!-- Left: Customer View -->
+          <div class="hero-panel">
+            <div class="panel-label">&#127760; Customer View</div>
+            <div class="mock-ws-title">Pete's Auto Care</div>
+            <div class="mock-ws-sub">Mechanical &amp; Logbook Services<br>Dandenong VIC</div>
+            <div class="hero-pills">
+              <span class="hero-pill">Logbook Service</span>
+              <span class="hero-pill">Brake &amp; Clutch</span>
+              <span class="hero-pill">Roadworthy</span>
+              <span class="hero-pill">Tyres</span>
+            </div>
+            <button class="mock-book-btn">Book a Service &rarr;</button>
           </div>
-          <div class="booking-field">
-            <div class="booking-field-label">Service</div>
-            <div class="booking-field-value"><span class="dot"></span>Logbook Service — 60,000 km</div>
-          </div>
-          <div class="booking-field">
-            <div class="booking-field-label">Vehicle</div>
-            <div class="booking-field-value"><span class="dot"></span>Toyota Corolla 2021 &mdash; 1ABC234</div>
-          </div>
-          <div class="booking-field">
-            <div class="booking-field-label">Requested Time</div>
-            <div class="booking-field-value"><span class="dot"></span>Tue 24 Jun &mdash; 9:00 AM</div>
-          </div>
-          <div class="booking-field">
-            <div class="booking-field-label">Customer</div>
-            <div class="booking-field-value"><span class="dot"></span>James R. &mdash; 0412 345 678</div>
-          </div>
-          <div class="booking-divider"></div>
-          <div class="booking-status">
-            <span class="booking-status-icon">&#10003;</span>
-            <span class="booking-status-text">Confirmed by workshop &mdash; just now</span>
+
+          <!-- Divider -->
+          <div class="hero-panel-divider"></div>
+
+          <!-- Right: Workshop View -->
+          <div class="hero-panel">
+            <div class="panel-label">&#128203; Workshop View</div>
+            <div class="booking-field">
+              <div class="booking-field-label">Service</div>
+              <div class="booking-field-value"><span class="dot"></span>Logbook Service — 60k</div>
+            </div>
+            <div class="booking-field">
+              <div class="booking-field-label">Vehicle</div>
+              <div class="booking-field-value"><span class="dot"></span>Toyota Corolla — 1ABC234</div>
+            </div>
+            <div class="booking-field">
+              <div class="booking-field-label">Time</div>
+              <div class="booking-field-value"><span class="dot"></span>Tue 24 Jun — 9:00 AM</div>
+            </div>
+            <div class="booking-field">
+              <div class="booking-field-label">Customer</div>
+              <div class="booking-field-value"><span class="dot"></span>James R. — 0412 345 678</div>
+            </div>
+            <div class="booking-status">
+              <span class="booking-status-text">&#10003; Confirmed by workshop</span>
+            </div>
           </div>
         </div>
+
         <div class="hero-notification">
           <div class="notif-icon">&#128241;</div>
           <div>
@@ -481,14 +574,19 @@
   <div class="container">
     <div class="features-intro fade-up">
       <p class="section-label">Platform Features</p>
-      <h2 class="section-title">Everything your workshop needs<br>to take bookings online</h2>
-      <p class="section-sub">Stop losing jobs to missed calls and unanswered texts. BusyBay puts your workshop online with tools built specifically for Australian automotive businesses.</p>
+      <h2 class="section-title">Your online presence. Your bookings.<br>All in one place.</h2>
+      <p class="section-sub">BusyBay gives Australian automotive workshops a branded public page customers can find and book from — plus a simple dashboard to manage every job. No web developer required.</p>
     </div>
     <div class="features-grid">
       <div class="feature-card fade-up">
-        <div class="feature-icon">&#128197;</div>
-        <h3>24/7 Online Booking</h3>
-        <p>Customers can book any time — day or night. Your personalised booking page captures service type, vehicle details, and rego number before you pick up the phone.</p>
+        <div class="feature-icon">&#127760;</div>
+        <h3>Your Workshop Page</h3>
+        <p>Get a branded public page at <code>busybay.com.au/your-workshop</code>. Show your services, hours, location, and a "Book Now" button — customers find you and book without needing to call.</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon">&#128295;</div>
+        <h3>Showcase Your Services</h3>
+        <p>List every service you offer — logbook, brakes, tyres, roadworthy, and more — with pricing and estimated duration. Customers know exactly what to book before they arrive.</p>
       </div>
       <div class="feature-card fade-up">
         <div class="feature-icon">&#9989;</div>
@@ -496,25 +594,100 @@
         <p>Every booking starts as a Pending Request. You review, confirm, reschedule, or decline — keeping you in full control of your bay capacity and workload.</p>
       </div>
       <div class="feature-card fade-up">
-        <div class="feature-icon">&#127981;</div>
-        <h3>Your Brand, Your Page</h3>
-        <p>Your BusyBay booking page is branded to your workshop — your logo, your colours, your services. Customers book with you, not through a marketplace.</p>
-      </div>
-      <div class="feature-card fade-up">
         <div class="feature-icon">&#128663;</div>
         <h3>Automotive-Specific Intake</h3>
-        <p>Built for workshops — customers submit make, model, year, rego, and job description upfront. No more back-and-forth before you can quote or schedule.</p>
+        <p>Customers submit make, model, year, rego, and job description upfront. No more back-and-forth before you can quote or schedule the work.</p>
       </div>
       <div class="feature-card fade-up">
         <div class="feature-icon">&#128276;</div>
         <h3>Instant Notifications</h3>
-        <p>Get notified the moment a booking lands. Confirm with one tap. Customers receive automatic emails — booking received, confirmed, and reminder before their appointment.</p>
+        <p>Get notified the moment a booking lands. Confirm with one tap. Customers receive automatic emails — booking received, confirmed, and a reminder before their appointment.</p>
       </div>
       <div class="feature-card fade-up">
-        <div class="feature-icon">&#128241;</div>
-        <h3>Manage on the Go</h3>
-        <p>View today's jobs, confirm requests, and update booking status from your phone — whether you're under a car or out on the road.</p>
+        <div class="feature-icon">&#128101;</div>
+        <h3>Customer Management</h3>
+        <p>Every customer who books through your page is saved. See their vehicle history, past bookings, and contact details — all in one place without a separate CRM.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TWO SIDES ──────────────────────────────────────── -->
+<section id="two-sides">
+  <div class="container">
+    <div class="two-sides-intro fade-up">
+      <p class="section-label">How It Works For Everyone</p>
+      <h2 class="section-title">One platform. Two powerful views.</h2>
+      <p class="section-sub">BusyBay serves both sides of every booking — your customers get a clean, professional page to find and book your services; you get a simple dashboard to manage every job.</p>
+    </div>
+    <div class="two-sides-grid">
+
+      <!-- Customer Side -->
+      <div class="fade-up">
+        <div class="side-header">
+          <span class="side-chip">&#127760; What your customers see</span>
+        </div>
+        <div class="side-card">
+          <div class="mock-name">Pete's Auto Care</div>
+          <div class="mock-sub">Mechanical &amp; Logbook Specialists &middot; Dandenong VIC</div>
+          <div class="pills-row">
+            <span class="pill">Logbook Service</span>
+            <span class="pill">Brake &amp; Clutch</span>
+            <span class="pill">Tyres &amp; Wheels</span>
+            <span class="pill">Roadworthy</span>
+          </div>
+          <div class="side-divider"></div>
+          <button class="side-book-btn">Book a Service &rarr;</button>
+          <p class="side-note">No account needed &mdash; books in 2 minutes</p>
+        </div>
+        <ul class="side-bullets">
+          <li>Your workshop name and services, professionally presented</li>
+          <li>Customers book any time &mdash; day or night</li>
+          <li>Works on mobile, tablet, and desktop</li>
+        </ul>
+      </div>
+
+      <!-- Workshop Side -->
+      <div class="fade-up">
+        <div class="side-header">
+          <span class="side-chip">&#128203; What you see</span>
+        </div>
+        <div class="side-card">
+          <div class="dash-header-row">Today's Jobs &mdash; 3 confirmed</div>
+          <div class="booking-row">
+            <span class="status-dot" style="background:#4ade80"></span>
+            <div class="booking-row-info">
+              <div class="booking-row-service">Logbook Service</div>
+              <div class="booking-row-customer">Sarah M.</div>
+            </div>
+            <div class="booking-row-time">9:00 AM</div>
+          </div>
+          <div class="booking-row">
+            <span class="status-dot" style="background:#4ade80"></span>
+            <div class="booking-row-info">
+              <div class="booking-row-service">Brake Inspection</div>
+              <div class="booking-row-customer">Tom K.</div>
+            </div>
+            <div class="booking-row-time">11:00 AM</div>
+          </div>
+          <div class="booking-row">
+            <span class="status-dot" style="background:#fbbf24"></span>
+            <div class="booking-row-info">
+              <div class="booking-row-service">Roadworthy Check</div>
+              <div class="booking-row-customer">Priya N. &mdash; Pending</div>
+            </div>
+            <div class="booking-row-time">2:00 PM</div>
+          </div>
+          <div class="side-divider"></div>
+          <div class="alert-bar">&#128276; 2 new booking requests waiting</div>
+        </div>
+        <ul class="side-bullets">
+          <li>Review and confirm every booking request</li>
+          <li>See all customer and vehicle details upfront</li>
+          <li>Manage your full schedule from your phone</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
@@ -524,8 +697,8 @@
   <div class="container">
     <div class="fade-up" style="text-align:center; margin-bottom: 0;">
       <p class="section-label">How It Works</p>
-      <h2 class="section-title">Up and running in minutes</h2>
-      <p class="section-sub" style="margin: 0 auto;">Set up your workshop profile, share your booking link, and start accepting jobs online — it's that simple.</p>
+      <h2 class="section-title">Set up once. Customers find you. Jobs come in.</h2>
+      <p class="section-sub" style="margin: 0 auto;">From sign-up to your first online booking — we'll guide you every step of the way.</p>
     </div>
     <div class="steps-grid">
       <div class="step fade-up">
@@ -542,9 +715,9 @@
       </div>
       <div class="step fade-up">
         <div class="step-num">03</div>
-        <div class="step-icon">&#128279;</div>
-        <h3>Share Your Booking Link</h3>
-        <p>Share your unique BusyBay URL on your website, Google Business, and social profiles. Add a QR code to your shopfront or invoices.</p>
+        <div class="step-icon">&#127760;</div>
+        <h3>Your Page Goes Live</h3>
+        <p>Your public workshop page is live at <code>busybay.com.au/your-workshop</code>. Share it on Google Business, socials, or add a QR code to your invoices — customers land on your page and book directly.</p>
       </div>
       <div class="step fade-up">
         <div class="step-num">04</div>
@@ -566,7 +739,7 @@
             <span class="about-img-card-tag">&#127462;&#127482; Built for Australian Workshops</span>
           </div>
           <div>
-            <p class="about-quote">"Small Australian automotive workshops deserve the same professional booking tools as large chains — without paying enterprise prices or losing control of their customer relationships."</p>
+            <p class="about-quote">"Small Australian automotive workshops deserve a proper online presence — not just a phone number. BusyBay gives them their own page, their own brand, and their own customer relationships."</p>
             <p class="about-quote-author">— BusyBay Founding Vision</p>
           </div>
         </div>
@@ -597,24 +770,23 @@
 
       <div class="about-copy fade-up">
         <p class="section-label">About BusyBay</p>
-        <h2 class="section-title">A booking platform built for your workshop</h2>
-        <p>BusyBay is a B2B SaaS platform purpose-built for small Australian automotive service businesses — mechanical workshops, tyre shops, detailers, mobile mechanics, auto-electricians, and roadworthy inspection stations.</p>
-        <p>We exist because too many great workshops are still running on phone calls, text messages, and paper diaries. BusyBay gives them a simple, branded online booking presence — a link, a QR code, a dashboard — at a price small businesses can actually afford.</p>
-        <p>Your BusyBay booking page is branded to your workshop. You own the customer relationship. We handle the technology so you can focus on the work.</p>
+        <h2 class="section-title">More than bookings — your workshop's online home</h2>
+        <p>BusyBay is purpose-built for small Australian automotive businesses — mechanical workshops, tyre shops, detailers, mobile mechanics, and roadworthy stations. We give each workshop a branded public page and a booking management dashboard, so they can operate professionally online without needing a web developer or expensive software.</p>
+        <p>Too many great workshops are invisible online. Customers can't find their services, can't book after hours, and end up going elsewhere. BusyBay fixes that — giving every workshop a professional online page, a booking system, and a customer record — all for a price small businesses can actually afford.</p>
 
         <div class="about-values">
           <div class="value-item">
-            <div class="value-item-icon">&#127363;</div>
+            <div class="value-item-icon">&#127760;</div>
             <div>
-              <h4>Workshop in Control</h4>
-              <p>Every booking is a request first — you confirm, reschedule, or decline. Designed to match how small automotive businesses actually operate.</p>
+              <h4>Your Own Workshop Page</h4>
+              <p>Every workshop gets a branded public page showing their services, hours, and location. Customers find you, browse your services, and book — all without leaving your page.</p>
             </div>
           </div>
           <div class="value-item">
-            <div class="value-item-icon">&#127981;</div>
+            <div class="value-item-icon">&#127937;</div>
             <div>
-              <h4>Your Brand, Not Ours</h4>
-              <p>Customers book directly with your workshop, not through a BusyBay marketplace. Your name, your logo, your relationship.</p>
+              <h4>Workshop in Control</h4>
+              <p>Every booking is a request first — you confirm, reschedule, or decline. Designed to match how small automotive businesses actually operate.</p>
             </div>
           </div>
           <div class="value-item">
@@ -634,8 +806,8 @@
 <section id="cta">
   <div class="container">
     <div class="cta-inner fade-up">
-      <h2>Ready to fill your workshop?</h2>
-      <p>Join the waitlist and be among the first Australian workshops to take bookings online with BusyBay.</p>
+      <h2>Get your workshop online today.</h2>
+      <p>Join the waitlist and be among the first Australian workshops with a branded page, online bookings, and a dashboard to manage every job.</p>
       <div class="cta-actions">
         <a href="#coming-soon" class="btn btn-white">Get Early Access &rarr;</a>
         <a href="#about" class="btn btn-ghost">Learn More</a>
@@ -650,8 +822,8 @@
     <div class="coming-soon-inner">
       <div class="coming-soon-copy fade-up">
         <div class="badge" style="margin-bottom:12px;">&#128640; Launching Soon</div>
-        <h3>Be the first workshop on BusyBay</h3>
-        <p>Enter your email and we'll notify you the moment BusyBay is ready to take your first online booking.</p>
+        <h3>Get your workshop page early</h3>
+        <p>Enter your email and we'll notify you the moment BusyBay is live — so you're one of the first workshops with your own page and online bookings.</p>
       </div>
       <form class="notify-form fade-up" onsubmit="handleNotify(event)">
         <input type="email" placeholder="you@yourworkshop.com.au" required id="notifyEmail" />
@@ -674,14 +846,15 @@
           </div>
           <span class="nav-logo-text">Busy<span>Bay</span></span>
         </a>
-        <p>Online booking software for Australian automotive workshops. Built for the workshop, not the marketplace.</p>
+        <p>Your workshop page and booking management — built for Australian automotive businesses. Your brand, your customers, your control.</p>
       </div>
       <div class="footer-col">
         <h4>Platform</h4>
         <ul>
           <li><a href="#features">Features</a></li>
+          <li><a href="#two-sides">Your Workshop Page</a></li>
           <li><a href="#how-it-works">How It Works</a></li>
-          <li><a href="#coming-soon">Pricing</a></li>
+          <li><a href="#coming-soon">Pricing &amp; Plans</a></li>
         </ul>
       </div>
       <div class="footer-col">
