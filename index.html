@@ -394,28 +394,6 @@
     .value-item h4 { font-size: 0.92rem; font-weight: 700; color: var(--primary); margin-bottom: 4px; }
     .value-item p { font-size: 0.85rem; color: var(--gray-600); line-height: 1.55; }
 
-    /* ── Team ───────────────────────────────────────────── */
-    #team { padding: 80px 0; background: var(--off-white); }
-    .team-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 28px; margin-top: 52px;
-    }
-    .team-card {
-      background: #fff; border-radius: var(--radius);
-      border: 1px solid var(--gray-200); padding: 28px;
-      text-align: center; transition: all .25s;
-    }
-    .team-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
-    .team-avatar {
-      width: 72px; height: 72px; border-radius: 50%; margin: 0 auto 16px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.6rem; font-weight: 800; color: #fff;
-      background: var(--teal-grad);
-    }
-    .team-name { font-size: 1rem; font-weight: 700; color: var(--primary); }
-    .team-role { font-size: 0.82rem; color: var(--accent); font-weight: 600; margin: 4px 0 10px; }
-    .team-bio { font-size: 0.85rem; color: var(--gray-600); line-height: 1.55; }
-
     /* ── CTA ────────────────────────────────────────────── */
     #cta {
       padding: 100px 0;
@@ -516,7 +494,6 @@
       .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
       .steps-grid::before { display: none; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
-      .team-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
       .hero-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -526,7 +503,6 @@
       .about-float-card { display: none; }
       .features-grid { grid-template-columns: 1fr; }
       .steps-grid { grid-template-columns: 1fr; }
-      .team-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
       .coming-soon-inner { flex-direction: column; }
       .nav-links, .nav-actions { display: none; }
@@ -827,37 +803,6 @@
   </div>
 </section>
 
-<!-- ── TEAM ────────────────────────────────────────────── -->
-<section id="team">
-  <div class="container">
-    <div class="fade-up" style="text-align:center; margin-bottom: 0;">
-      <p class="section-label">Our Team</p>
-      <h2 class="section-title">The people building BusyBay</h2>
-      <p class="section-sub" style="margin: 0 auto 0;">A passionate team of builders, designers, and business thinkers — united by a belief that Australian small businesses deserve world-class technology.</p>
-    </div>
-    <div class="team-grid">
-      <div class="team-card fade-up">
-        <div class="team-avatar">JW</div>
-        <div class="team-name">Jagwinder Walia</div>
-        <div class="team-role">Co-Founder &amp; CEO</div>
-        <p class="team-bio">Entrepreneur and technology leader with deep experience building platforms that help businesses scale. Passionate about empowering Australian SMBs.</p>
-      </div>
-      <div class="team-card fade-up">
-        <div class="team-avatar">PT</div>
-        <div class="team-name">Product Team</div>
-        <div class="team-role">Design &amp; Product</div>
-        <p class="team-bio">Our product team focuses relentlessly on user experience — ensuring BusyBay is as beautiful to use as it is powerful under the hood.</p>
-      </div>
-      <div class="team-card fade-up">
-        <div class="team-avatar">ET</div>
-        <div class="team-name">Engineering Team</div>
-        <div class="team-role">Technology &amp; Infrastructure</div>
-        <p class="team-bio">World-class engineers building scalable, secure systems from the ground up — with Australian data sovereignty built into every decision.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ── CTA ─────────────────────────────────────────────── -->
 <section id="cta">
   <div class="container">
@@ -917,7 +862,6 @@
         <h4>Company</h4>
         <ul>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#team">Our Team</a></li>
           <li><a href="#coming-soon">Careers</a></li>
           <li><a href="#coming-soon">Press</a></li>
         </ul>
